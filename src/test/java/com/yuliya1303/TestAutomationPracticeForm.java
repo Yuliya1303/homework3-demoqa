@@ -4,7 +4,6 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -37,8 +36,6 @@ public class TestAutomationPracticeForm {
         String state = "NCR";
         String city = "Delhi";
 
-        File FILE = new File("src/test/resources/" + picture);
-
         open("/automation-practice-form");
 
         // hide footer and GoogleAds (as Submit btn is not visible on my screen)
@@ -56,7 +53,7 @@ public class TestAutomationPracticeForm {
         $(".react-datepicker__month").$(byText(dayOfBirth)).click();
         $("#subjectsInput").setValue(subject).pressEnter();
         $("#hobbiesWrapper").$(byText(hobby)).click();
-        $("#uploadPicture").sendKeys(FILE.getAbsolutePath());
+        $("#uploadPicture").uploadFromClasspath(picture);
         $("#currentAddress").setValue(currentAddressStreet);
         $("#state").click();
         $(".css-26l3qy-menu").$(byText(state)).click();
