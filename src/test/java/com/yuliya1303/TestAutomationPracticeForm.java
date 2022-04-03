@@ -14,7 +14,6 @@ public class TestAutomationPracticeForm {
 
     @BeforeAll
     static void screenSetUp() {
-        Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
     }
