@@ -19,7 +19,7 @@ public class TestAutomationPracticeForm {
     }
 
     @Test
-    void FillRegistrationFormByValidData () {
+    void fillRegistrationFormByValidData () {
         String firstName = "Yuliya";
         String lastName = "Byshko";
         String email = "yuliya@gmail.com";
@@ -61,17 +61,16 @@ public class TestAutomationPracticeForm {
         $("#submit").click();
 
         $(".modal-content").shouldHave(
-                text(firstName + " " + lastName),
-                text(email),
-                text(gender),
-                text(mobile),
-                text(dayOfBirth + " " + monthOfBirth + "," + yearOfBirth),
-                text (subject),
-                text (hobby),
-                text (subject),
-                text (picture),
-                text (currentAddressStreet),
-                text (state + " " + city)
+                text("Student Name " + firstName + " " + lastName),
+                text("Student Email " + email),
+                text("Gender " + gender),
+                text("Mobile " + mobile),
+                text("Date of Birth " + dayOfBirth + " " + monthOfBirth + "," + yearOfBirth),
+                text ("Subjects " + subject),
+                text ("Hobbies " + hobby),
+                text ("Picture " + picture),
+                text (" " + currentAddressStreet),
+                text ("State and City " + state + " " + city)
         );
 
     }
