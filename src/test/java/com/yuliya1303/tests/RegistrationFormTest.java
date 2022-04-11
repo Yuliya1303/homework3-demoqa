@@ -42,7 +42,7 @@ public class RegistrationFormTest {
     }
 
     @Test
-    void fillRegistrationFormByValidData () {
+    void fillRegistrationFormByValidData() {
         registrationFormPage.openPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)

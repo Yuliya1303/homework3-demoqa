@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import static com.codeborne.selenide.Selenide.$;
+
 public class RandomUtils {
     enum subjects {
         English, Chemistry, Commerce, Economics
@@ -45,30 +47,30 @@ public class RandomUtils {
     }
 
     public static String getRandomState() {
-        List<states> StatesList = Arrays.asList(states.values());
+        List<states> statesList = Arrays.asList(states.values());
         Random randomState = new Random();
-        return String.valueOf(StatesList.get(randomState.nextInt(StatesList.size())));
+        return String.valueOf(statesList.get(randomState.nextInt(statesList.size())));
     }
 
     public static String getRandomCity(String value) {
         String city;
         switch (value) {
             case "NCR":
-                List<String> CitiesListNCR = List.of("Delhi", "Gurgaon");
+                List<String> citiesListNCR = List.of("Delhi", "Gurgaon");
                 Random randomCityNCR = new Random();
-                city = CitiesListNCR.get(randomCityNCR.nextInt(CitiesListNCR.size()));
+                city = citiesListNCR.get(randomCityNCR.nextInt(citiesListNCR.size()));
                 break;
 
             case "Haryana":
-                List<String> CitiesListHar = List.of("Karnal", "Panipat");
+                List<String> citiesListHar = List.of("Karnal", "Panipat");
                 Random randomCityHar = new Random();
-                city = CitiesListHar.get(randomCityHar.nextInt(CitiesListHar.size()));
+                city = citiesListHar.get(randomCityHar.nextInt(citiesListHar.size()));
                 break;
 
             case "Uttar Pradesh":
-                List<String> CitiesListPrad = List.of("Agra", "Lucknow");
+                List<String> citiesListPrad = List.of("Agra", "Lucknow");
                 Random randomCityPrad = new Random();
-                city = CitiesListPrad.get(randomCityPrad.nextInt(CitiesListPrad.size()));
+                city = citiesListPrad.get(randomCityPrad.nextInt(citiesListPrad.size()));
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + value);
