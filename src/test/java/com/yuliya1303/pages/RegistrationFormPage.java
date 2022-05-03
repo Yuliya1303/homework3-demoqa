@@ -64,7 +64,7 @@ public class RegistrationFormPage {
 
     @Step("Select Gender")
     public RegistrationFormPage setGender(String value) {
-        gender.click();
+        gender.$(byText(value)).click();
 
         return this;
     }
