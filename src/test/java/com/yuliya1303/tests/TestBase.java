@@ -1,4 +1,4 @@
-package com.yuliya1303.tests.demoqa;
+package com.yuliya1303.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
