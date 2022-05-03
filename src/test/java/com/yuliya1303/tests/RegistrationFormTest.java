@@ -25,7 +25,7 @@ public class RegistrationFormTest extends TestBase {
     String dayOfBirth = getRandomBirthdayDay(monthOfBirth);
     String subject = getRandomSubject();
     String hobby = getRandomHobby();
-    String picture = "img/fish.png";
+    String picture = "fish.png";
     String currentAddressStreet = faker.address().streetAddress();
     String state = "NCR";
     String city = "Delhi";
@@ -53,7 +53,7 @@ public class RegistrationFormTest extends TestBase {
                 .setBirthdayDate(yearOfBirth,monthOfBirth,dayOfBirth)
                 .setSubject(subject)
                 .setHobby(hobby)
-                .uploadPicture(picture)
+                .uploadPicture("img/" + picture)
                 .setAddress(currentAddressStreet)
                 .setState(state)
                 .setCity(city);
