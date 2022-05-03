@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import static com.codeborne.selenide.Selenide.$;
-
 public class RandomUtils {
     enum subjects {
         English, Chemistry, Commerce, Economics
@@ -17,10 +15,6 @@ public class RandomUtils {
 
     enum gender {
         Male, Female, Other
-    }
-
-    enum states {
-        NCR, Haryana
     }
 
     //not all, just to try
@@ -44,38 +38,6 @@ public class RandomUtils {
         List<gender> gendersList = Arrays.asList(gender.values());
         Random randomGender = new Random();
         return String.valueOf(gendersList.get(randomGender.nextInt(gendersList.size())));
-    }
-
-    public static String getRandomState() {
-        List<states> statesList = Arrays.asList(states.values());
-        Random randomState = new Random();
-        return String.valueOf(statesList.get(randomState.nextInt(statesList.size())));
-    }
-
-    public static String getRandomCity(String value) {
-        String city;
-        switch (value) {
-            case "NCR":
-                List<String> citiesListNCR = List.of("Delhi", "Gurgaon");
-                Random randomCityNCR = new Random();
-                city = citiesListNCR.get(randomCityNCR.nextInt(citiesListNCR.size()));
-                break;
-
-            case "Haryana":
-                List<String> citiesListHar = List.of("Karnal", "Panipat");
-                Random randomCityHar = new Random();
-                city = citiesListHar.get(randomCityHar.nextInt(citiesListHar.size()));
-                break;
-
-            case "Uttar Pradesh":
-                List<String> citiesListPrad = List.of("Agra", "Lucknow");
-                Random randomCityPrad = new Random();
-                city = citiesListPrad.get(randomCityPrad.nextInt(citiesListPrad.size()));
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + value);
-        }
-        return city;
     }
 
     public static String getRandomMonthsOfBirth() {
