@@ -13,7 +13,7 @@ public class TestBase {
 
     @Test
     @BeforeAll
-    void SetUp () {
+    static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.browser = "Chrome";
