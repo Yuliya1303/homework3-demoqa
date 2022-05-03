@@ -1,4 +1,4 @@
-package com.yuliya1303.tests;
+package com.yuliya1303.tests.demoqa;
 
 import com.github.javafaker.Faker;
 import com.yuliya1303.pages.RegistrationFormPage;
