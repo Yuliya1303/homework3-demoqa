@@ -69,7 +69,7 @@ public class RegistrationFormTest extends TestBase {
                 .checkResult("Hobbies",hobby)
                 .checkResult("Picture",picture)
                 .checkResult("Address",currentAddressStreet)
-                .checkResult("State and City",expectedStateAndCity+"1");
+                .checkResult("State and City",expectedStateAndCity);
     }
 
 }
